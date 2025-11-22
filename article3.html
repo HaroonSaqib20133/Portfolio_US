@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff; --muted:#f9f9f9; --text:#111; --accent:#000; --radius:10px;
+  --transition:350ms; --shadow:0 6px 18px rgba(15,15,15,0.06);
+}
+body{margin:0;padding:0;background:var(--bg);font-family:'Raleway',sans-serif;color:var(--text)}
+
+#navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#ffffff;
+  padding:20px 0;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  z-index:1000;
+  transition:transform 0.3s ease-in-out;
+}
+#navbar ul{list-style:none;display:flex;justify-content:center;margin:0;padding:0}
+#navbar ul li{margin:0 20px}
+#navbar ul li a{text-decoration:none;color:#333;font-weight:bold;font-family:'Montserrat',sans-serif;transition:color 0.3s ease}
+#navbar ul li a:hover{color:#0077cc}
+
+.parent{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:100vh;
+  margin-top:120px;
+  padding:0 40px;
+  gap:40px;
+}
+.content h1{font-size:42px;font-family:'Montserrat',sans-serif;margin-bottom:10px}
+.content h2{font-size:20px;margin-bottom:5px}
+.body-text{font-size:17px;line-height:1.7;margin-bottom:25px;text-align:justify}
+
+.div2 img{
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  transition:transform var(--transition) ease, box-shadow var(--transition) ease;
+}
+.div2 img:hover{
+  transform:scale(1.03);
+  box-shadow:0 12px 28px rgba(15,15,15,0.15);
+}
+
+@media(max-width:900px){
+  .parent{grid-template-columns:1fr;padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<header id="navbar">
+  <nav>
+    <ul>
+      <li><a href="index.html">Work</a></li>
+      <li><a href="about.html">About Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="parent">
+  <div class="content">
+    <h1>Sustainability in Agriculture</h1>
+    <h2>Insights from My Internship Experience</h2>
+
+    <p class="body-text">
+      Pakistan is facing an urgent environmental crisis. With forest cover now below 5%, the nation’s natural landscapes are disappearing at an alarming rate due to urban expansion, agricultural conversion, illegal logging, and widespread reliance on fuelwood in rural areas. Weak enforcement of environmental policies has only worsened this trend. As forests vanish, Pakistan faces severe consequences: loss of biodiversity, soil degradation, groundwater depletion, and increased vulnerability to climate disasters such as floods. These challenges threaten food security, rural livelihoods, and the country’s long-term climate resilience.
+    </p>
+
+    <p class="body-text">
+      The Seeds and Sustainability initiative offers a holistic, community-centered solution to this crisis, rooted in the philosophy that every seed planted is a step toward climate resilience and national renewal. At the heart of the program are Community Seed Banks, which store and distribute native seeds to empower local communities to take charge of reforestation. In hard-to-reach or heavily degraded areas, drone-based aerial seeding provides an efficient and scalable way to restore forests. By focusing on native species like Neem, Sheesham, and Kikar, the initiative ensures ecological compatibility, higher survival rates, and long-term environmental stability.
+    </p>
+
+    <p class="body-text">
+      To address the growing pressures on agricultural land, the project integrates modern farming innovations such as hydroponics and aeroponics. These soil-free, water-efficient systems allow food production in urban spaces without further encroaching on farmland, supporting sustainable growth while conserving vital natural resources.
+    </p>
+
+    <p class="body-text">
+      Education and community empowerment are central to the initiative’s success. Rural communities receive training to manage nurseries and collect seeds, while youth are engaged through school programs and nationwide planting campaigns. Islamic principles like Khilafah (stewardship) are used to cultivate environmental responsibility culturally and spiritually.
+    </p>
+
+      <p class="body-text">
+      A robust national framework supports implementation, combining policy reform, governance, AI-powered monitoring, and partnerships with NGOs, corporations, and research institutions. Progress is tracked using measurable indicators, including hectares reforested, seed survival rates, water efficiency, and youth participation.
+    </p>
+    
+    <p class="body-text">
+      By blending technology, community engagement, ecological expertise, and cultural values, the Seeds and Sustainability initiative aims to create a permanent environmental and cultural shift. It envisions a greener, more resilient Pakistan, where development coexists with thriving ecosystems, communities are empowered, and every planted seed contributes to a sustainable national future.
+    </p>
+  </div>
+
+  <div class="div2">
+    <img src="Article/Article3/pic1.jpg">
+    <img src="Article/Article3/pic2.png">
+    <img src="Article/Article3/pic3.png">
+    <img src="Article/Article3/pic4.png">
+  </div>
+</div>
+
+<script>
+let lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    navbar.style.transform = "translateY(-100%)";
+  } else {
+    navbar.style.transform = "translateY(0)";
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seeds for Change</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff; --muted:#f9f9f9; --text:#111; --accent:#000; --radius:10px;
+  --transition:350ms; --shadow:0 6px 18px rgba(15,15,15,0.06);
+}
+body{margin:0;padding:0;background:var(--bg);font-family:'Raleway',sans-serif;color:var(--text)}
+
+#navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#ffffff;
+  padding:20px 0;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  z-index:1000;
+  transition:transform 0.3s ease-in-out;
+}
+#navbar ul{list-style:none;display:flex;justify-content:center;margin:0;padding:0}
+#navbar ul li{margin:0 20px}
+#navbar ul li a{text-decoration:none;color:#333;font-weight:bold;font-family:'Montserrat',sans-serif;transition:color 0.3s ease}
+#navbar ul li a:hover{color:#0077cc}
+
+/* LAYOUT */
+.parent{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:100vh;
+  margin-top:120px;
+  padding:0 40px;
+  gap:40px;
+}
+.content h1{font-size:42px;font-family:'Montserrat',sans-serif;margin-bottom:10px}
+.content h2{font-size:20px;margin-bottom:5px}
+.body-text{font-size:17px;line-height:1.7;margin-bottom:25px;text-align:justify}
+
+.div2 img{
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  transition:transform var(--transition) ease, box-shadow var(--transition) ease;
+}
+.div2 img:hover{
+  transform:scale(1.03);
+  box-shadow:0 12px 28px rgba(15,15,15,0.15);
+}
+
+@media(max-width:900px){
+  .parent{grid-template-columns:1fr;padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<header id="navbar">
+  <nav>
+    <ul>
+      <li><a href="index.html">Work</a></li>
+      <li><a href="about.html">About Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="parent">
+  <div class="content">
+    <h1>Seed For Change</h1>
+    <h2>Insights from My Internship Experience</h2>
+    <p><i>Punjab Seeds Company</i></p>
+
+    <p class="body-text">
+      During my internship at Punjab Seeds Company, I gained a profound understanding of how sustainability in agriculture requires more than passion—it demands careful coordination, analytical thinking, and a long-term perspective. Experiencing the corporate environment firsthand allowed me to observe how businesses operate at a critical intersection: they can either contribute to environmental stress or actively mitigate it through responsible, informed decisions. I realized that creating meaningful impact is not just about ambition; it is about aligning goals with strategic action.
+    </p>
+
+    <p class="body-text">
+      Rotating through several departments, I saw how sustainability can be embedded across nearly every facet of business operations. One initiative I proposed was a tree-planting CSR program, designed to connect environmental restoration with the company’s broader outreach objectives. I also collaborated with product development teams on research into drought-resistant seeds, which underscored how innovation can help conserve land resources while supporting farmers facing the challenges of climate change. These experiences highlighted that data-driven problem-solving, when paired with collaboration, can produce tangible ecological improvements.
+    </p>
+
+    <p class="body-text">
+      Among the most rewarding projects was contributing to the design of the “Seeds for Change” campaign. By linking seed donations to community-led reforestation efforts, this initiative illustrated how businesses can leverage their core strengths to meet environmental and social needs simultaneously. Through this project, I witnessed firsthand the impact of integrating strategic planning, operational capacity, and environmental awareness into a single initiative.
+    </p>
+
+    <p class="body-text">
+      Ultimately, my internship transformed my understanding of sustainable development. I learned that solutions with real-world impact are created not only in laboratories and planning rooms but also in corporate environments when guided by empathy, purpose, and shared responsibility. This experience reinforced my belief that meaningful change in agriculture and the environment requires a balance of vision, strategy, and collaborative effort.
+    </p>
+  </div>
+
+  <div class="div2">
+    <img src="Article/Article2/pic.jpg">
+    <img src="Article/Article2/pic2.jpg">
+  </div>
+</div>
+
+<script>
+let lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    navbar.style.transform = "translateY(-100%)";
+  } else {
+    navbar.style.transform = "translateY(0)";
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+</script>
+
+</body>
+</html>

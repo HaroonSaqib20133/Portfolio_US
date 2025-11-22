@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seeds for Change | Muhammad Abubakar</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff; --muted:#f9f9f9; --text:#111; --accent:#000; --radius:10px;
+  --transition:350ms; --shadow:0 6px 18px rgba(15,15,15,0.06);
+}
+body{margin:0;padding:0;background:var(--bg);font-family:'Raleway',sans-serif;color:var(--text)}
+
+#navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#ffffff;
+  padding:20px 0;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  z-index:1000;
+  transition:transform 0.3s ease-in-out;
+}
+#navbar ul{list-style:none;display:flex;justify-content:center;margin:0;padding:0}
+#navbar ul li{margin:0 20px}
+#navbar ul li a{text-decoration:none;color:#333;font-weight:bold;font-family:'Montserrat',sans-serif;transition:color 0.3s ease}
+#navbar ul li a:hover{color:#0077cc}
+
+/* LAYOUT */
+.parent{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:100vh;
+  margin-top:120px;
+  padding:0 40px;
+  gap:40px;
+}
+.content h1{font-size:42px;font-family:'Montserrat',sans-serif;margin-bottom:10px}
+.content h2{font-size:20px;margin-bottom:5px}
+.body-text{font-size:17px;line-height:1.7;margin-bottom:25px;text-align:justify}
+
+.div2 img{
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  transition:transform var(--transition) ease, box-shadow var(--transition) ease;
+}
+.div2 img:hover{
+  transform:scale(1.03);
+  box-shadow:0 12px 28px rgba(15,15,15,0.15);
+}
+
+@media(max-width:900px){
+  .parent{grid-template-columns:1fr;padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<header id="navbar">
+  <nav>
+    <ul>
+      <li><a href="index.html">Work</a></li>
+      <li><a href="about.html">About Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="parent">
+  <div class="content">
+    <h1>Sustainability in Agriculture</h1>
+    <h2>Insights from My Internship Experience</h2>
+    <p><i>Punjab Seeds Company</i></p>
+
+    <p class="body-text">
+      Every journey has a beginning, and mine took root in the farmlands of Punjab. What started as an academic curiosity soon became a deeply personal mission. I wanted to understand how environmental change — the kind you can see in the cracks of dry soil and hear in the stories of struggling farmers — was reshaping lives in real time.
+    </p>
+
+    <p class="body-text">
+      Through days spent walking fields and talking with local farmers, I came to see that sustainability isn’t just a scientific pursuit; it’s a human one. The loss of forest cover wasn’t simply a matter of ecology — it affected food security, income, and entire communities. Listening to these stories grounded my understanding of what environmental action truly means.
+    </p>
+
+    <p class="body-text">
+      Motivated to create change, I organized the Green Punjab Workshop, where we exchanged ideas on reforestation, soil health, and water conservation. Together, we distributed over fifty native tree saplings — small symbols of hope for greener farms and stronger futures.
+    </p>
+  </div>
+
+  <div class="div2">
+    <img src="Article/Article1/pic1.jpg">
+  </div>
+</div>
+
+<script>
+let lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    navbar.style.transform = "translateY(-100%)";
+  } else {
+    navbar.style.transform = "translateY(0)";
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+</script>
+
+</body>
+</html>
